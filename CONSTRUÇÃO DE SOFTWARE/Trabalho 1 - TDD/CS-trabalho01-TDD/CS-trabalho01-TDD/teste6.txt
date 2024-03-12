@@ -1,0 +1,4 @@
+primeira linha
+segunda linha "\n" ainda segunda linha
+$#!*%&%(@¨()$%*(&%$(@*%@)_!*\n))
+print("teste")

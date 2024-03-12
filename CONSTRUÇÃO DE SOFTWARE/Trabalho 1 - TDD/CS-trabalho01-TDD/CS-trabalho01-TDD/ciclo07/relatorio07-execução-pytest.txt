@@ -1,0 +1,20 @@
+Colocando seis linhas, sendo a quarta um trecho de código, com um for rodando um print "teste7.txt"
+
+houve um problema de execução na abertuda do arquivo que teve que ser resolvido, o problema foi:
+
+File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo07\conta-linhas07.py", line 29, in <module>
+    test_07()
+  File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo07\conta-linhas07.py", line 20, in test_07
+    assert conta_linhas("teste.txt") == 1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo07\conta-linhas07.py", line 6, in conta_linhas
+    file = open(arquivo, "r")
+           ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'teste.txt'
+
+Foi detectado que o erro se dava pela abertura do diretório na própria IDE 
+
+Não foi necessário refatorar o código para este caso
+
+PS D:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD> & C:/Python312/python.exe "d:/Faculdade/3 - Terceiro Ano/CONSTRUÇÃO DE SOFTWARE/Trabalho 1 - TDD/CS-trabalho01-TDD/CS-trabalho01-TDD/ciclo07/conta-linhas07.py"
+Passou em todos os testes!

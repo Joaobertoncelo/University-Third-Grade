@@ -1,0 +1,6 @@
+Colocando duas linhas no teste "teste2.txt"
+
+Não foi necessário refatorar o código para este caso
+
+PS D:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD> & C:/Python312/python.exe "d:/Faculdade/3 - Terceiro Ano/CONSTRUÇÃO DE SOFTWARE/Trabalho 1 - TDD/CS-trabalho01-TDD/CS-trabalho01-TDD/ciclo02/conta-linhas02.py"
+Passou em todos os testes!

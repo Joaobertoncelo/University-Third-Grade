@@ -1,0 +1,6 @@
+Colocando duas linhas com um "\n"(adicionando as aspas) no teste, para ver se conta uma linha a mais "teste4.txt"
+
+Não foi necessário refatorar o código para este caso
+
+PS D:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD> & C:/Python312/python.exe "d:/Faculdade/3 - Terceiro Ano/CONSTRUÇÃO DE SOFTWARE/Trabalho 1 - TDD/CS-trabalho01-TDD/CS-trabalho01-TDD/ciclo04/conta-linhas04.py"
+Passou em todos os testes!

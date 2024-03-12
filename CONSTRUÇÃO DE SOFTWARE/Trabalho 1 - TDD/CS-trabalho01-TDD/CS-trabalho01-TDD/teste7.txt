@@ -1,0 +1,6 @@
+primeira linha
+segunda linha "\n" ainda segunda linha
+$#!*%&%(@¨()$%*(&%$(@*%@)_!*\n))
+for i in range 5{
+    print("teste")
+}

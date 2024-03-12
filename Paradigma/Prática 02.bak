@@ -1,0 +1,4 @@
+#lang racket
+
+(define (isento-tarifa? id) 
+	(if (< id 18) #t (if (> id 65) #t #f)))

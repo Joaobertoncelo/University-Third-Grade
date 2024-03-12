@@ -1,0 +1,6 @@
+addi r5,r0,7
+addi r5,r5,8
+mul r3,r5,2
+bgt r3,r0,6
+addi r1,r0,10
+div r3,r3,2

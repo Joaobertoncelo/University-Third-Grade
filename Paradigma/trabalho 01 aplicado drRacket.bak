@@ -1,0 +1,62 @@
+#lang racket
+
+
+;; Definição de tipos
+;; game -> String
+;; Representa uma lista de jogos no formato "time1 gols1 time2 gols2"
+
+;; resultado -> (list String Number String Number)
+;; Representa um jogo no formato (list "time1" gols1 "time2" gols2)
+
+;; encontra-times -> (list resultado) -> (list String)
+;; Dada uma lista de resultados, retorna uma lista com os nomes dos times
+(define (encontra-times resultados)
+  (foldr (lambda (game acc)
+           (append (list (first game) (third game)) acc))
+         '()
+         resultados))
+
+;; calcula-desempenhos -> (list String) (list resultado) -> (list Number)
+;; Deve calcular o desempenho de cada time, um por vez, a partir da diferença de gols em cada jogo
+(define (calcula-desempenhos times resultados)
+  (map (lambda (time)
+         (foldr (lambda (game acc)
+                  (cond
+                    [(equal? time (first game)) (+ acc (- (second game) (fourth game)))]
+                    [(equal? time (third game)) (+ acc (- (fourth game) (second game)))]
+                    [else acc]))
+                0
+                resultados))
+       times)) 
+
+;; classifica -> (list Number) -> (list Number)
+;; Deve classificar os times pelo desempenho, do maior para o menor
+(define (classifica desempenhos)
+  (sort desempenhos >))
+
+;; desempenho->string -> Number -> String
+;; Dado um desempenho, retorna uma string no formato "time: desempenho"
+(define (desempenho->string desempenho)
+  (string-append (number->string desempenho) ": "))
+
+;; string->resultado -> String -> resultado
+;; Dada uma string no formato "time1 gols1 time2 gols2", retorna um resultado
+(define (string->resultado s)
+  (let ([lst (string-split s " ")])
+    (list (first lst) (string->number (second lst)) (third lst) (string->number (fourth lst)))))  
+
+;; ListaString -> ListaString
+(define (classifica-times sresultados)
+  ;; Transforma a lista de strings da entrada em uma lista de resultados
+  (define resultados (map string->resultado sresultados))
+  ;; Encontra o nome dos times
+  ;; ListaResultado -> ListaString
+  (define times (encontra-times resultados))
+  ;; Calcula o desempenho de cada time
+  ;; ListaString ListaResultado -> ListaDesempenho
+  (define desempenhos (calcula-desempenhos times resultados))
+  ;; Faz a classificao dos times pelo desempenho
+  ;; ListaDesempenho -> ListaDesempenho
+  (define classificacao (classifica desempenhos))
+  ;; Transforma classificação (lista de desempenhos) em uma lista de strings
+  (map desempenho->string classificacao))

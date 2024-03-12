@@ -1,0 +1,18 @@
+Foram colocados todos os casos anteriores juntos para testar a responsividade final do programa
+
+Houve um erro de execução na primeira tentativa, porém, foi detectado que o erro se tratava do nome descrito no código
+
+File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo10\conta-linhas10.py", line 32, in <module>
+    test_10()
+  File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo10\conta-linhas10.py", line 29, in test_10
+    assert conta_linhas("teste10.txt") == 38
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD\ciclo10\conta-linhas10.py", line 6, in conta_linhas
+    file = open(arquivo, "r")
+           ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'teste10.txt'
+
+
+
+PS D:\Faculdade\3 - Terceiro Ano\CONSTRUÇÃO DE SOFTWARE\Trabalho 1 - TDD\CS-trabalho01-TDD\CS-trabalho01-TDD> & C:/Python312/python.exe "d:/Faculdade/3 - Terceiro Ano/CONSTRUÇÃO DE SOFTWARE/Trabalho 1 - TDD/CS-trabalho01-TDD/CS-trabalho01-TDD/ciclo10/conta-linhas10.py"
+Passou em todos os testes!

@@ -1,0 +1,1 @@
+Colocando apenas uma letra no teste "teste.txt"
